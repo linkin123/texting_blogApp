@@ -2,6 +2,7 @@ package com.example.texting.gaston.blogApp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.findNavController
 import com.example.texting.R
 
 class MainActivity : AppCompatActivity() {
