@@ -1,4 +1,4 @@
-package com.example.texting.gaston.blogApp.data.remote
+package com.example.texting.gaston.blogApp.data.remote.home
 
 import com.example.texting.gaston.blogApp.core.Resource
 import com.example.texting.gaston.blogApp.data.model.Post

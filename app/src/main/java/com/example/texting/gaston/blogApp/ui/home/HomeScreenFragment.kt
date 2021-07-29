@@ -8,7 +8,7 @@ import androidx.fragment.app.viewModels
 import com.example.texting.R
 import com.example.texting.databinding.FragmentHomeScreenBinding
 import com.example.texting.gaston.blogApp.core.Resource
-import com.example.texting.gaston.blogApp.data.remote.HomeScreenDataSource
+import com.example.texting.gaston.blogApp.data.remote.home.HomeScreenDataSource
 import com.example.texting.gaston.blogApp.domain.HomeScreenRepoImpl
 import com.example.texting.gaston.blogApp.presentation.HomeScreenViewModel
 import com.example.texting.gaston.blogApp.presentation.HomeScreenViewModelFactory
