@@ -6,8 +6,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.texting.R
+import com.example.texting.gaston.blogApp.core.Result
 import com.example.texting.databinding.FragmentHomeScreenBinding
-import com.example.texting.gaston.blogApp.core.Resource
 import com.example.texting.gaston.blogApp.data.remote.home.HomeScreenDataSource
 import com.example.texting.gaston.blogApp.domain.HomeScreenRepoImpl
 import com.example.texting.gaston.blogApp.presentation.HomeScreenViewModel
@@ -26,14 +26,14 @@ class HomeScreenFragment : Fragment(R.layout.fragment_home_screen) {
         binding = FragmentHomeScreenBinding.bind(view)
         viewModel.fetchLatestPosts().observe(viewLifecycleOwner, { result ->
             when (result) {
-                is Resource.Loading -> {
+                is Result.Loading -> {
                     binding.progressBar.visibility = View.VISIBLE
                 }
-                is Resource.Success -> {
+                is Result.Success -> {
                     binding.progressBar.visibility = View.GONE
                     binding.rvHome.adapter = HomeScreenAdapter(result.data)
                 }
-                is Resource.Failure -> {
+                is Result.Failure -> {
                     binding.progressBar.visibility = View.GONE
                     Toast.makeText(
                         requireContext(),

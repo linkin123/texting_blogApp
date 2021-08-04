@@ -73,4 +73,5 @@
     <string name="main_tuto_message">Aqui puedes agregar a tus amigos. Usa su email. \nSolo faltara que acepten tu solicitud de amistad.</string>
     <string name="main_tuto_ok">Entendido !</string>
     <string name="main_tuto_fab_Add">mainFabAdd03</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

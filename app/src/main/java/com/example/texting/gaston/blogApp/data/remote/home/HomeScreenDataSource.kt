@@ -1,12 +1,12 @@
 package com.example.texting.gaston.blogApp.data.remote.home
 
-import com.example.texting.gaston.blogApp.core.Resource
+import com.example.texting.gaston.blogApp.core.Result
 import com.example.texting.gaston.blogApp.data.model.Post
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.tasks.await
 
 class HomeScreenDataSource {
-    suspend fun getLatestPosts(): Resource<List<Post>>{
+    suspend fun getLatestPosts(): Result<List<Post>> {
         val postList = mutableListOf<Post>()
         val querySsnapshot = FirebaseFirestore.getInstance().collection("posts").get().await()
         for(post in querySsnapshot.documents){
@@ -14,6 +14,6 @@ class HomeScreenDataSource {
                 postList.add(fbPost)
             }
         }
-        return Resource.Success(postList)
+        return Result.Success(postList)
     }
 }
