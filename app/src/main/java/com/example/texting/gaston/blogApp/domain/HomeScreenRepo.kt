@@ -4,6 +4,6 @@ import com.example.texting.gaston.blogApp.core.Result
 import com.example.texting.gaston.blogApp.data.model.Post
 
 interface HomeScreenRepo {
-    suspend fun getLatestPost(): Result<List<Post>>
+    suspend fun getLatestPost(): List<Post>
 
 }

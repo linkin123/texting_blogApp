@@ -24,7 +24,18 @@
             app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loginFragment_to_setUpProfileFragment"
+            app:destination="@id/setUpProfileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -32,17 +43,38 @@
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
-            android:id="@+id/action_registerFragment_to_homeScreenFragment2"
-            app:destination="@id/homeScreenFragment2" />
+            android:id="@+id/action_registerFragment_to_setUpProfileFragment"
+            app:destination="@id/setUpProfileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/cameraFragment"
         android:name="com.example.texting.gaston.blogApp.ui.camera.CameraFragment"
         android:label="fragment_camera"
-        tools:layout="@layout/fragment_camera" />
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_cameraFragment_to_homeScreenFragment2"
+            app:destination="@id/homeScreenFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.texting.gaston.blogApp.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/setUpProfileFragment"
+        android:name="com.example.texting.gaston.blogApp.ui.auth.SetUpProfileFragment"
+        android:label="fragment_set_up_profile"
+        tools:layout="@layout/fragment_set_up_profile" >
+        <action
+            android:id="@+id/action_setUpProfileFragment_to_homeScreenFragment2"
+            app:destination="@id/homeScreenFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
 </navigation>

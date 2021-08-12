@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".gaston.blogApp.ui.camera.CameraFragment">
+    tools:context=".gaston.blogApp.ui.auth.SetUpProfileFragment">
+
 
     <ImageView
-        android:id="@+id/post_image"
+        android:id="@+id/profile_image"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:src="@drawable/ic_baseline_add_a_photo_24"
@@ -15,19 +16,19 @@
         android:layout_marginTop="16dp" />
 
     <EditText
-        android:id="@+id/etxt_description"
+        android:id="@+id/etxt_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
-        android:hint="description" />
+        android:hint="username" />
 
     <Button
-        android:id="@+id/btn_upload_photo"
+        android:id="@+id/btn_create_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/blue_900"
         android:layout_marginTop="16dp"
-        android:text="upload photo"
+        android:text="create profile"
         android:textColor="#FFFFFF" />
 
 </LinearLayout>
